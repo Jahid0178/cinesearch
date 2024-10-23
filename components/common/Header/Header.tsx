@@ -20,10 +20,10 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href={"/wishlist"}
+                href={"/watchlist"}
                 className="hover:text-orange-500"
               >
-                Wishlist
+                Watchlist
               </Link>
             </li>
           </ul>
