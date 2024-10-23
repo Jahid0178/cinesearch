@@ -1,12 +1,11 @@
 import React from "react";
+import PopularMovieSection from "./_components/PopularMovieSection";
 
 const HomePage = () => {
   return (
-    <section>
-      <div className="container">
-        <p>Home Page</p>
-      </div>
-    </section>
+    <>
+      <PopularMovieSection />
+    </>
   );
 };
 
