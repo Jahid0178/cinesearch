@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { MovieType } from "@/typescript/types";
 import Link from "next/link";
+import MovieDetailsAction from "./MovieDetailsAction";
+import { MovieType } from "@/typescript/types";
 
 interface MovieDetailsSectionProps {
   movie: MovieType;
@@ -68,6 +69,9 @@ const MovieDetailsSection = ({ movie }: MovieDetailsSectionProps) => {
             <div>
               <h3 className="text-xl font-bold mb-2">Overview</h3>
               <p>{movie.overview}</p>
+            </div>
+            <div>
+              <MovieDetailsAction movieId={movie.id} />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Production Companies</h3>
