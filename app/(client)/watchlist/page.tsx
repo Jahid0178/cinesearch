@@ -1,13 +1,8 @@
 import React from "react";
+import WishlistsSection from "./_components/WishlistsSection";
 
 const WatchlistPage = () => {
-  return (
-    <section>
-      <div className="container">
-        <p>Watchlist page</p>
-      </div>
-    </section>
-  );
+  return <WishlistsSection />;
 };
 
 export default WatchlistPage;
