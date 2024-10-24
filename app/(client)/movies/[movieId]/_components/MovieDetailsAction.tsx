@@ -1,21 +1,24 @@
 "use client";
 
 import React from "react";
+import useWatchlistStore from "@/store/watchlistStore";
 import { FaRegBookmark } from "react-icons/fa";
-import { handleAddToWatchlist } from "@/lib/actions/actions";
+import { MovieType } from "@/typescript/types";
 
 interface MovieDetailsActionProps {
-  movieId: number;
+  movie: MovieType;
 }
 
-const MovieDetailsAction = ({ movieId }: MovieDetailsActionProps) => {
+const MovieDetailsAction = ({ movie }: MovieDetailsActionProps) => {
+  const { addToWatchlist } = useWatchlistStore((state) => state);
+
   return (
     <div>
       <button
         className="btn btn-primary"
-        onClick={() => handleAddToWatchlist(movieId)}
+        onClick={() => addToWatchlist(movie)}
       >
-        Add to watchlist <FaRegBookmark />
+        Add to watchlist <FaRegBookmark size={20} />
       </button>
     </div>
   );

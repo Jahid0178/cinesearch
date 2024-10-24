@@ -71,7 +71,7 @@ const MovieDetailsSection = ({ movie }: MovieDetailsSectionProps) => {
               <p>{movie.overview}</p>
             </div>
             <div>
-              <MovieDetailsAction movieId={movie.id} />
+              <MovieDetailsAction movie={movie} />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Production Companies</h3>
