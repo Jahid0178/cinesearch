@@ -1,16 +1,20 @@
 "use client";
 
 import React from "react";
+import useWatchlistStore from "@/store/watchlistStore";
+import { MovieType } from "@/typescript/types";
 import { FaBookmark } from "react-icons/fa";
 
-const MovieCardActions = () => {
-  const handleWatchlist = () => {
-    console.log("Added to watchlist");
-  };
+interface MovieCardActionsProps {
+  movie: MovieType;
+}
+
+const MovieCardActions = ({ movie }: MovieCardActionsProps) => {
+  const { addToWatchlist } = useWatchlistStore((state) => state);
   return (
     <div>
       <button
-        onClick={handleWatchlist}
+        onClick={() => addToWatchlist(movie)}
         title="Add to watchlist"
       >
         <FaBookmark

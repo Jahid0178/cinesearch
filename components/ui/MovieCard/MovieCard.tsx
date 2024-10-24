@@ -14,7 +14,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
   return (
     <div className="p-2 border rounded-md relative group bg-white">
       <div className="group-hover:block hidden absolute top-3 right-3">
-        <MovieCardActions />
+        <MovieCardActions movie={movie} />
       </div>
       <Image
         src={"https://image.tmdb.org/t/p/w400" + poster_path}
