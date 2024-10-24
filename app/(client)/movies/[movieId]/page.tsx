@@ -1,5 +1,7 @@
 import React from "react";
 import MovieDetailsSection from "./_components/MovieDetailsSection";
+import MovieCastSection from "./_components/MovieCastSection";
+import MovieRecommendationsSection from "./_components/MovieRecommendationsSection";
 
 interface MovieDetailsPageProps {
   params: {
@@ -15,11 +17,22 @@ const MovieDetailsPage = async ({ params }: MovieDetailsPageProps) => {
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.TMDB_API_KEY}`,
     {
       method: "GET",
-      cache: "force-cache",
     }
   );
   const movie = await response.json();
-  return <MovieDetailsSection movie={movie} />;
+
+  const castResponse = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${process.env.TMDB_API_KEY}`
+  );
+  const { cast } = await castResponse.json();
+
+  return (
+    <>
+      <MovieDetailsSection movie={movie} />
+      <MovieCastSection casts={cast} />
+      <MovieRecommendationsSection />
+    </>
+  );
 };
 
 export default MovieDetailsPage;
