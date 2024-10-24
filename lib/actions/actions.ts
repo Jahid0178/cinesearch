@@ -62,19 +62,3 @@ export async function fetchRecommendationsMovie(movieId: string) {
     console.log("recommendation error", error);
   }
 }
-
-export async function handleAddToWatchlist(movieId: number) {
-  try {
-    const response = await fetch(`http://localhost:3000/api/watchlist`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ movieId }),
-    });
-
-    console.log(response);
-  } catch (error) {
-    console.log("error", error);
-  }
-}
