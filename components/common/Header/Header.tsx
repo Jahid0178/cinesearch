@@ -1,7 +1,11 @@
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import useWatchlistStore from "@/store/watchlistStore";
 
 const Header = () => {
+  const { watchlists } = useWatchlistStore((state) => state);
   return (
     <header className="py-6 bg-gray-900 text-white">
       <div className="container">
@@ -23,7 +27,7 @@ const Header = () => {
                 href={"/watchlist"}
                 className="hover:text-orange-500"
               >
-                Watchlist
+                Watchlist <span>{watchlists.length}</span>
               </Link>
             </li>
           </ul>
