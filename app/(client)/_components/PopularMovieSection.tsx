@@ -1,12 +1,10 @@
 import React from "react";
 import MovieCard from "@/components/ui/MovieCard/MovieCard";
 import { MovieType } from "@/typescript/types";
+import { fetchPopularMovies } from "@/lib/actions/actions";
 
 const PopularMovieSection = async () => {
-  const response = await fetch("http://localhost:3000/api/popular", {
-    method: "GET",
-  });
-  const { results } = await response.json();
+  const { results } = await fetchPopularMovies();
 
   return (
     <section>
