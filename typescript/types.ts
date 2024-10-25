@@ -1,3 +1,10 @@
+export type TMDBResponseType = {
+  page: number;
+  results: MovieType[];
+  total_pages: number;
+  total_results: number;
+};
+
 export type MovieType = {
   adult: boolean;
   backdrop_path: string;
