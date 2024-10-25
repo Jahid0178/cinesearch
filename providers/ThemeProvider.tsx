@@ -8,7 +8,16 @@ interface ThemeProviderProps {
 }
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const { isDarkMode } = useThemeStore((state) => state);
+  const { isDarkMode, setDarkMode } = useThemeStore((state) => state);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setDarkMode(savedTheme === "dark");
+      document.documentElement.classList.add(savedTheme);
+    }
+  }, []);
+
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
