@@ -12,7 +12,7 @@ const WatchlistCard = ({ movie }: WatchlistCardProps) => {
   const { title, backdrop_path, overview, release_date } = movie;
 
   return (
-    <div className="flex flex-col sm:flex-row gap-4 border-2 bg-white p-2 rounded-md">
+    <div className="flex flex-col sm:flex-row gap-4 border-2 p-2 rounded-md bg-white text-black dark:bg-gray-800/50 dark:text-white dark:border-gray-500">
       <Image
         src={process.env.NEXT_PUBLIC_IMAGE_BASE_URL + backdrop_path}
         alt={title}

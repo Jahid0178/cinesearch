@@ -77,7 +77,10 @@ const MovieDetailsSection = ({ movie }: MovieDetailsSectionProps) => {
               <h3 className="text-xl font-bold mb-2">Production Companies</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
                 {production_companies.map((company) => (
-                  <div key={company.id}>
+                  <div
+                    key={company.id}
+                    className="border rounded-md p-2 bg-white text-black dark:bg-gray-800/50 dark:text-white dark:border-gray-500"
+                  >
                     <div className="space-y-2">
                       <Image
                         src={

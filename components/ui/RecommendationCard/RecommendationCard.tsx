@@ -9,7 +9,7 @@ interface RecommendationCardProps {
 
 const RecommendationCard = ({ movie }: RecommendationCardProps) => {
   return (
-    <div className="border rounded-md overflow-hidden p-1">
+    <div className="border rounded-md overflow-hidden p-1 bg-white text-black dark:bg-gray-800/50 dark:text-white dark:border-gray-500">
       <Image
         src={"https://image.tmdb.org/t/p/w400" + movie.backdrop_path}
         alt={movie.title}

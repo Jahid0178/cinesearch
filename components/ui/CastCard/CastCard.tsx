@@ -12,7 +12,7 @@ const CastCard = ({ cast }: CastCardProps) => {
     (cast.profile_path || "/");
 
   return (
-    <div className="border rounded-md overflow-hidden">
+    <div className="border rounded-md overflow-hidden bg-white text-black dark:bg-gray-800/50 dark:text-white dark:border-gray-500">
       <Image
         src={imgUrl || "/images/placeholder.png"}
         alt={cast.name}

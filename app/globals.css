@@ -7,12 +7,12 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -22,7 +22,7 @@ body {
 
 @layer base {
   section {
-    @apply py-4;
+    @apply py-4 bg-white text-black dark:bg-gray-900 dark:text-white;
   }
 }
 

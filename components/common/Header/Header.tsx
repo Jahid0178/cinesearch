@@ -2,10 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
+import Button from "@/components/ui/Button/Button";
 import useWatchlistStore from "@/store/watchlistStore";
+import useThemeStore from "@/store/themeStore";
+import { FaMoon } from "react-icons/fa";
+import { BsFillSunFill } from "react-icons/bs";
 
 const Header = () => {
   const { watchlists } = useWatchlistStore((state) => state);
+  const { isDarkMode, toggleTheme } = useThemeStore((state) => state);
+
   return (
     <header className="py-6 bg-gray-900 text-white">
       <div className="container">
@@ -29,6 +35,23 @@ const Header = () => {
               >
                 Watchlist <span>{watchlists.length}</span>
               </Link>
+            </li>
+            <li>
+              {isDarkMode ? (
+                <Button
+                  onClick={toggleTheme}
+                  title="Light Mode"
+                >
+                  <BsFillSunFill size={25} />
+                </Button>
+              ) : (
+                <Button
+                  onClick={toggleTheme}
+                  title="Dark Mode"
+                >
+                  <FaMoon size={20} />
+                </Button>
+              )}
             </li>
           </ul>
         </nav>

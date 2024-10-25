@@ -12,7 +12,7 @@ interface MovieCardProps {
 const MovieCard = ({ movie }: MovieCardProps) => {
   const { title, adult, poster_path, vote_average, popularity } = movie;
   return (
-    <div className="p-2 border rounded-md relative group bg-white">
+    <div className="p-2 border rounded-md relative group bg-white text-black dark:bg-gray-800/50 dark:text-white dark:border-gray-500">
       <div className="group-hover:block hidden absolute top-3 right-3">
         <MovieCardActions movie={movie} />
       </div>
