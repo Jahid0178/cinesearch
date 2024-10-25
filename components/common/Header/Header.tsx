@@ -7,13 +7,21 @@ import useWatchlistStore from "@/store/watchlistStore";
 import useThemeStore from "@/store/themeStore";
 import { FaMoon } from "react-icons/fa";
 import { BsFillSunFill } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
   const { watchlists } = useWatchlistStore((state) => state);
   const { isDarkMode, toggleTheme } = useThemeStore((state) => state);
 
+  const isHome = pathname === "/";
+
   return (
-    <header className="py-6 bg-gray-900 text-white">
+    <header
+      className={`py-6 bg-gray-900 text-white z-50 ${
+        isHome ? "fixed top-0 left-0 right-0" : "static"
+      }`}
+    >
       <div className="container">
         <nav className="flex justify-between items-center gap-4">
           <h2 className="text-3xl font-semibold">
