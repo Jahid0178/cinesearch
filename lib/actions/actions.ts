@@ -2,9 +2,12 @@ import { TMDBResponseType } from "@/typescript/types";
 
 export async function fetchPopularMovies() {
   try {
-    const response = await fetch("http://localhost:3000/api/popular", {
-      method: "GET",
-    });
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDB_API_KEY}`,
+      {
+        method: "GET",
+      }
+    );
 
     const data = await response.json();
 
@@ -65,12 +68,15 @@ export async function fetchRecommendationsMovie(movieId: string) {
   }
 }
 
-export async function fetchSearchMovies(query: string): Promise<TMDBResponseType | undefined> {
+export async function fetchSearchMovies(
+  query: string
+): Promise<TMDBResponseType | undefined> {
   try {
-    const response: Response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${query}`);
+    const response: Response = await fetch(
+      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${query}`
+    );
 
     return await response.json();
-
   } catch (error) {
     console.log("fetch_search_movies", error);
   }
