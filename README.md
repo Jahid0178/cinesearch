@@ -17,7 +17,6 @@ This application is built using the latest web development technologies and show
 - **Next 14**, **Tailwind**, and **Typescript**: Core technologies used for building the user interface and interaction.
 - **Fetch API**: Used for fetching movie data from the TMDB API.
 - **LocalStorage**: To store user preferences like: Theme.
-- **Debounce**: Implemented for the search input to optimize API requests and improve performance.
 
 ## Run Locally
 
