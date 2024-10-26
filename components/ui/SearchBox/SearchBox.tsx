@@ -11,10 +11,9 @@ type Inputs = {
 
 const SearchBox = () => {
   const router = useRouter();
-  const { register, handleSubmit, reset } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
   const handleSearch: SubmitHandler<Inputs> = (data) => {
     router.push(`/movies?search=${data.search}`);
-    reset();
   };
 
   return (
