@@ -9,7 +9,7 @@ This application is built using the latest web development technologies and show
 - **Search Movies:** Quickly find movies by title and view matching search results.
 - **Detailed Information:** Access comprehensive details like overview, genre, release date, and rating for each movie.
 - **Popular Movies:** Browse the latest popular movies on the home page.
-- **Watchlist:** Users can add or remove books from their watchlist.
+- **Watchlist:** Users can add or remove movie from their watchlist.
 - **Responsive Design:** Optimized for desktop, tablet, and mobile screens.
 
 ## Tech Stack 💻
