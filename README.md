@@ -6,7 +6,7 @@ This application is built using the latest web development technologies and show
 
 ## Features 🌟
 
-- **_earch Movies:_** Quickly find movies by title and view matching search results.
+- **Search Movies:_** Quickly find movies by title and view matching search results.
 - **_Detailed Information:_** Access comprehensive details like overview, genre, release date, and rating for each movie.
 - **_Popular Movies:_** Browse the latest popular movies on the home page.
 - **_Watchlist:_** Users can add or remove books from their watchlist.
