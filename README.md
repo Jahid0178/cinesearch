@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CineSearch Application 🎥
 
-## Getting Started
+Welcome to CineSearch, a sleek and modern movie search application! CineSearch lets you discover movies, view detailed information, and stay up-to-date with trending titles using the powerful TMDB API.
 
-First, run the development server:
+This application is built using the latest web development technologies and showcases clean code practices and a responsive, user-friendly UI.
+
+## Features 🌟
+
+- **_earch Movies:_** Quickly find movies by title and view matching search results.
+- **_Detailed Information:_** Access comprehensive details like overview, genre, release date, and rating for each movie.
+- **_Popular Movies:_** Browse the latest popular movies on the home page.
+- **_Watchlist:_** Users can add or remove books from their watchlist.
+- **_Responsive Design:_** Optimized for desktop, tablet, and mobile screens.
+
+## Tech Stack 💻
+
+- **Next 14**, **Tailwind**, and **Typescript**: Core technologies used for building the user interface and interaction.
+- **Fetch API**: Used for fetching movie data from the TMDB API.
+- **LocalStorage**: To store user preferences like: Theme.
+- **Debounce**: Implemented for the search input to optimize API requests and improve performance.
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/Jahid0178/cinesearch.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd cinesearch
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies
 
-## Learn More
+```bash
+  pnpm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+  pnpm dev
+```
